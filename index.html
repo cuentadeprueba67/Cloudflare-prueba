@@ -140,16 +140,15 @@
 
   /* ---------- hero ---------- */
   .hero{padding:78px 0 64px; position:relative;}
-  .hero .wrap{display:grid; grid-template-columns:1.05fr 0.95fr; gap:50px; align-items:center;}
+  .hero .wrap{display:flex; justify-content:center; text-align:center;}
+  .hero .wrap > div{max-width:640px;}
   .kicker{
     font-family:'Caveat', cursive; font-size:1.35rem; color:var(--teal); font-weight:700;
     display:inline-block; margin-bottom:6px; transform:rotate(-2deg);
   }
-  .hero h1{font-size:clamp(2.3rem, 4.4vw, 3.5rem); max-width:11.5ch; margin-bottom:20px;}
-  .hero p.lede{font-size:1.1rem; max-width:46ch; color:var(--plum-soft); margin-bottom:28px;}
-  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap;}
-  .hero-art{position:relative;}
-  .hero-art svg{width:100%; height:auto;}
+  .hero h1{font-size:clamp(2.3rem, 4.4vw, 3.5rem); margin:0 auto 20px;}
+  .hero p.lede{font-size:1.1rem; max-width:52ch; color:var(--plum-soft); margin:0 auto 28px;}
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; justify-content:center;}
 
   /* ---------- servicios ---------- */
   .servicios{padding:80px 0 30px; background:var(--paper);}
@@ -374,7 +373,6 @@
   .hero h1{animation-delay:.15s;}
   .hero p.lede{animation-delay:.28s;}
   .hero-ctas{animation-delay:.4s;}
-  .hero-art{animation-delay:.2s;}
   @keyframes fadeUp{to{opacity:1; transform:translateY(0);}}
   @media (prefers-reduced-motion: reduce){
     .fade-up{animation:none; opacity:1; transform:none;}
@@ -389,8 +387,6 @@
     .nav-links{display:none;}
     .desktop-cta{display:none;}
     .menu-toggle{display:inline-flex; align-items:center; justify-content:center;}
-    .hero .wrap{grid-template-columns:1fr;}
-    .hero-art{order:-1; max-width:260px; margin:0 auto;}
     .servicio-row, .servicio-row.reverse{grid-template-columns:1fr;}
     .servicio-row > div:first-child, .servicio-row.reverse > div:first-child{order:1;}
     .servicio-row .servicio-art, .servicio-row.reverse .servicio-art{order:2; justify-self:center; max-width:280px;}
@@ -436,28 +432,12 @@
   <div class="wrap">
     <div>
       <span class="kicker fade-up">hecho a mano en Cali</span>
-      <h1 class="fade-up">Taller de diseño y calzado sobre medidas</h1>
-      <p class="lede fade-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h1 class="fade-up">Taller de diseño y calzado sobre medida personalizado</h1>
+      <p class="lede fade-up">Diseñamos y elaboramos a mano tenis y calzado personalizado — desde la Línea Blanca en perla hasta sets completos de quinceañera y temáticas de tu película o cuento favorito — para vestir cada evento con un detalle que cuente tu historia.</p>
       <div class="hero-ctas fade-up">
         <a href="#contacto" class="stamp-btn pop">Escríbenos por WhatsApp</a>
         <a href="#servicios" class="stamp-btn ghost">Ver servicios</a>
       </div>
-    </div>
-    <div class="hero-art fade-up">
-      <svg viewBox="0 0 420 380" xmlns="http://www.w3.org/2000/svg">
-        <g transform="rotate(-4 210 190)">
-          <rect x="60" y="40" width="300" height="300" fill="#F3EADA" stroke="#3B1229" stroke-width="2"/>
-        </g>
-        <g transform="rotate(3 210 190)">
-          <circle cx="210" cy="170" r="86" fill="#D6336C" opacity="0.14"/>
-          <path d="M210 96 L226 150 L282 150 L236 182 L252 236 L210 202 L168 236 L184 182 L138 150 L194 150 Z" fill="#3B1229"/>
-        </g>
-        <circle cx="90" cy="90" r="6" fill="#1E7A72"/>
-        <circle cx="350" cy="270" r="8" fill="#C9972A"/>
-        <circle cx="360" cy="90" r="5" fill="#D6336C"/>
-        <path d="M60 300 Q90 270 120 300 T180 300" stroke="#1E7A72" stroke-width="3" fill="none" stroke-linecap="round"/>
-        <path d="M270 60 Q285 40 300 60" stroke="#C9972A" stroke-width="3" fill="none" stroke-linecap="round"/>
-      </svg>
     </div>
   </div>
 </section>
